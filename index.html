@@ -2,42 +2,386 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Good Eats - Street</title>
         <meta name="viewport" content="width=device-width, initial-scale">
-        <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Bebas%20Neue%7CMontserrat:ital,wght@0,400;0,700;1,400">
+        <title>Good Eats - Street Tacos</title>
+        <link href="https://fonts.google.com/share?selection.family=Bebas%20Neue%7CMontserrat:ital,wght@0,400;0,700;1,400" rel="stylesheet">
+        <style>
+html {
+    box-sizing: border-box;
+    background-color: rgba(122, 191, 191, .5);
+    font-family: 'Montserrat', sans-serif;
+}
+*,*:before, *:after {
+    box-sizing: inherit;
+}
+img {
+    max-width: 100%;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding: 0 9.5% 0 9.5%;
+    }
+h1, h2, h3, nav a, nav span, menu li, #social li, footer {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 25px;
+}
+header {
+    background-color: #fff;
+    height: 100px;
+    position: absolute;
+    top: 150px;
+    width: 80%;
+    text-align: center;
+}
+nav a {
+    font-size: 20px;
+}
+nav span {
+    font-size: 20px;
+}
+menu li {
+    font-size: 20px;
+}
+#social li {
+    font-size: 20px;
+}
+footer {
+    font-size: 20px;
+    background-color: #fff;
+}
+p, dd, li, nav, input {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+p {
+    font-size: 16px;
+}
+dd {
+    font-size: 16px;
+    margin-left: 0;
+}
+li {
+    font-size: 16px;
+}
+nav {
+    font-size: 16px;
+}
+input {
+    font-size: 16px;
+    border: solid;
+    border-width: 2px;
+    border-color: #eb5428;
+    height: 50px;
+}
+button {
+    border: solid;
+    border-width: 2px;
+    border-color: #eb5428;
+    height: 50px;
+}
+dt {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+.sign-in {
+    fill: #eb5428;
+}
+.main {
+    list-style-type: none;
+}
+#connect {
+    display: inline-flex;
+}
+#connect h2, #connect h3 {
+    visibility: hidden;
+}
+#connect ul {
+    list-style-type: none;
+}
+#details ul {
+    list-style-type: none;
+}
+#sides {
+    background-color: #7abfbf;
+
+}
+#sides h2 {
+    text-align: center;
+}
+#details, #ingredients, #directions {
+    background-color: #fff;
+}
+nav.main ul li:first-child {
+    fill:#fff;
+    background-color:#eb5428;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+nav.main ul {
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    list-style-type: none;
+    padding-left: 0
+}
+nav.main h2 {
+    visibility: hidden;
+}
+section#mainnav {
+    position: absolute;
+    top: 0;
+}
+section#mainnav li {
+    max-width: 5%;
+    margin: 5px 10px 5px 10px;
+}
+section#mainnav li div {
+    display: inline;
+}
+#save, #share, #print, #jump {
+    fill: #eb5428;
+}
+.rice-rating-one, .rice-rating-two, .rice-rating-three, .rice-rating-four {
+    fill:#eb5428;
+}
+.salsa-rating-one, .salsa-rating-two, .salsa-rating-three, .salsa-rating-four, .salsa-rating-five {
+    fill:#eb5428;
+}
+.guacamole-rating-one, .guacamole-rating-two, .guacamole-rating-three, .guacamole-rating-four {
+    fill:#eb5428;
+}
+.tortillas-rating-one, .tortillas-rating-two, .tortillas-rating-three, .tortillas-rating-four {
+    fill:#eb5428;
+}
+/*-------------------- SMALL --------------------------------*/
+@media (min-width: 414px) {
+    div#sidedishes {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    menu li {
+    list-style-type: none;
+    display: flex;
+    }
+    section#search {
+        position: absolute;
+        top: 0;
+        visibility: hidden;
+    }
+    #connect {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+
+    }
+}
+/*-------------------- MEDIUM --------------------------------*/
+@media (min-width: 768px) {
+    section#mainnav {
+        position: absolute;
+        top: 0;
+    }
+    section#mainnav li {
+        display: inline-flex;
+    }
+    div#sidedishes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    }
+    .container1 {
+        display: grid;
+    }
+    .ingredients-directions {
+        display: flex; 
+    }
+    menu li {
+    list-style-type: none;
+    display: inline;
+    }
+    #details {
+        align-items: center;
+    }
+    section#search {
+        position: absolute;
+        top: 0;
+        left: 500px;
+    }
+    #connect {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    #mainnav h2 {
+        visibility: hidden;
+    }
+}
+/*-------------------- LARGE ------------------------------------*/
+@media (min-width: 1280px) {
+    section#mainnav {
+        position: absolute;
+        top: 0;
+    }
+    section#mainnav li {
+        display: inline-flex;
+    }
+    div#sidedishes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    }
+    .ingredients-directions {
+        display: grid;
+        grid-template-columns: .5fr 1.5fr;
+    }
+    #details {
+        background-color: #000;
+        color: #7abfbf;
+        justify-content: center;
+    }
+    dl {
+        display: inline-flex;
+    }
+    menu li {
+        list-style-type: none;
+        display: flex;
+    }
+    .container {
+        background-color: #fff;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: .5fr 1fr 2fr;
+        grid-template-rows: 1fr;
+        margin-top: 250px;
+        justify-items: center;
+    }
+    footer {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    section#search {
+        position: absolute;
+        top: 0;
+        left: 500px;
+    }
+    section#search h3 {
+        visibility: hidden;
+    }
+    div.prep, div.cook, div.total, div.author, div.servings {
+        max-width: 100%;
+        text-align: center;
+    }
+    section#connect ul {
+        display: flex;
+    }
+    #connect {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 2fr;
+    }
+    .connect1 {
+        order: 2;
+    }
+    .connect2 {
+        order: 1;
+    }
+    #mainnav h2 {
+        visibility: hidden;
+    }
+}
+/*---------------------------------------------------------------*/
+        </style> 
     </head>
     <body>
         <header>
             <h1>Street Tacos</h1>    
         </header>
-            <section id="nav">
-                <nav>
-                    <ul>
-                        <li>Save  (save svg)</li>
-                        <li>Share (share svg)</li>
-                        <li>Print (print svg)</li>
-                        <li>Jump to Recipe (jump svg)</li>
-                    </ul>
-                </nav>
-            </section>
         <main>
-            <img src="" alt="">(street-tacos.png)
-
-            <p>Street tacos are delicious, amazing, and oh so mouthwatering! Bite into tender steak, zesty lime flavor with a hint of spice and add on tomatoes, avocado, and onions for a savory bite you are going to love!</p>
-
-            <p>These street tacos are completely jam-packed with flavor and they are so easy to make. I love how the meat is so tender and juicy and only takes an hour to marinate! If you absolutely love tacos like me, try out these other amazing taco recipes! These taco-stuffed avocados, Baja fish tacos, and ground beef tacos will not disappoint!!</p>
+        <div class="menu"> 
+            <div class="container">
+                <menu>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" class="save" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#EB5428" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+                        <polyline points="7 11 12 16 17 11"></polyline>
+                        <line x1="12" y1="4" x2="12" y2="16"></line>
+                        </svg>SAVE</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" class="share" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#EB5428" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="6" r="3"></circle>
+                        <circle cx="18" cy="18" r="3"></circle>
+                        <line x1="8.7" y1="10.7" x2="15.3" y2="7.3"></line>
+                        <line x1="8.7" y1="13.3" x2="15.3" y2="16.7"></line>
+                        </svg>SHARE</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" class="print" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#EB5428" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2"></path>
+                        <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4"></path>
+                        <rect x="7" y="13" width="10" height="8" rx="2"></rect>
+                        </svg>PRINT</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" class="jump" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#EB5428" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
+                        <path d="M9 17l3 -3l-3 -3"></path>
+                        <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                        <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
+                        </svg>JUMP</li>
+                </menu>
+            
         
+                <img src="images/street-tacos.png" alt="street-tacos png">
+                <div>
+                <p>Street tacos are delicious, amazing, and oh so mouthwatering! Bite into tender steak, zesty lime flavor with a hint of spice and add on tomatoes, avocado, and onions for a savory bite you are going to love!</p>
+                
+                <p>These street tacos are completely jam-packed with flavor and they are so easy to make. I love how the meat is so tender and juicy and only takes an hour to marinate! If you absolutely love tacos like me, try out these other amazing taco recipes! These taco-stuffed avocados, Baja fish tacos, and ground beef tacos will not disappoint!!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="details">
             <section id="details">
                 <h2>Details</h2>
-                    <ul>
-                        <li>Prep Time: 10 minutes</li>
-                        <li>Cook Time: 10 minutes</li>
-                        <li>Total Time: 20 minutes</li>
-                        <li>Author: Taco Cheesington</li>
-                        <li>Servings: 6 Tacos</li>
-                    </ul>
+                    <dl>
+                        <div class="prep">
+                            <dt>Prep Time</dt>
+                            <dd>10 minutes</dd>
+                        </div>
+                        <div class="cook">
+                            <dt>Cook Time</dt>
+                            <dd>10 minutes</dd>
+                        </div>
+                        <div class="total">
+                            <dt>Total Time</dt>
+                            <dd>20 minutes</dd>
+                        </div>
+                        <div class="author">
+                            <dt>Author</dt>
+                            <dd>Taco Cheesington</dd>
+                        </div>
+                        <div class="servings">
+                            <dt>Servings</dt>
+                            <dd>6 Tacos</dd>
+                        </div>
+                    </dl>
             </section>
-            
+        </div>
+        <div class="ingredients-directions">
             <section id="ingredients">
                 <h2>Ingredients</h2>
                     <ul>
@@ -64,81 +408,200 @@
                         <li>Add toppings: Put the steak in the center of your tortilla with desired toppings.</li>
                     </ol>
             </section>
-
+        </div>
             <section id="sides">
                 <h2>Need some side dishes?</h2>
-                    <div id="rice">
+                <div id="sidedishes">
+                    <section id="rice">
                         <h3>Mexican Rice</h3>
-                        <p>(mexican-rice.png)
-                        Traditional recipe with a twist.
-                        Rating: 4 of 5 Stars
+                        <img src="images/mexican-rice.png" alt="mexican-rice picture">
+                        <p>
+                        Traditional recipe with a twist.<br>
+                        Rating <svg xmlns="http://www.w3.org/2000/svg" class="rice-rating-one" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="rice-rating-two" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="rice-rating-three" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="rice-rating-four" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="rice-rating-five" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
                         </p>
-                    </div> 
-                    <div id="salsa">
+                    </section> 
+                    <section id="salsa">
                         <h3>Salsa</h3>
-                        <p>(salsa.png)
-                        Just the right amount of spice.
-                        Rating: 5 of 5 Stars
+                        <img src="images/salsa.png" alt="salsa picture">
+                        <p>
+                        Just the right amount of spice.<br>
+                        Rating <svg xmlns="http://www.w3.org/2000/svg" class="salsa-rating-one" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="salsa-rating-two" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="salsa-rating-three" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="salsa-rating-four" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="salsa-rating-five" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
                         </p>
-                    </div>
-                    <div id="guacamole"> 
+                    </section>
+                    <section id="guacamole"> 
                         <h3>Guacamole</h3>
+                        <img src="images/guacamole.png" alt="guacamole picture">
                         <p>
-                        (guacamole.png)
-                        Fresh and healthy.
-                        Rating: 4 of 5 Stars
+                        Fresh and healthy.<br>
+                        Rating <svg xmlns="http://www.w3.org/2000/svg" class="guacamole-rating-one" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="guacamole-rating-two" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="guacamole-rating-three" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="guacamole-rating-four" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="guacamole-rating-five" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
                         </p>
-                    </div>
-                    <div id="tortillas"> 
+                    </section>
+                    <section id="tortillas"> 
                         <h3>Tortillas</h3>
+                        <img src="images/tortillas.png" alt="tortillas picture">
                         <p>
-                        (tortillas.png)
-                        Easy to make and so good. 
-                        Rating: 4 of 5 Stars
+                        Easy to make and so good.<br> 
+                        Rating <svg xmlns="http://www.w3.org/2000/svg" class="tortillas-rating-one" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="tortillas-rating-two" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="tortillas-rating-three" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="tortillas-rating-four" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="tortillas-rating-five" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                          </svg>
                         </p>
-                    </div>
+                    </section>
+                </div>
             </section>
 
             <section id="mainnav">
-                <nav class="main">
-                <h2>Main Navigation (hamburger svg)</h2>
+                <h2>Main Navigation<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" style="enable-background:new 0 0 40 40" xml:space="preserve">
+                    <path d="M36 17.6c.1 1.8.1 3.6.1 5.4.1 2.7 0 5.5-.9 8-.5 1.4-1.3 2.6-2.4 3.6-3.3 2.7-6 2.4-12.6 2.4-4.6 0-9.2.2-12.2-1.9-2.5-1.8-3.6-4.2-3.8-7.1-.2-3.6.1-7.2.1-10.8 0-2.6.6-5.1 1.9-7.4 2.5-4.5 7.3-7.5 12.4-8 .4-.1.9-.1 1.4-.1 5.2 0 10.1 2.6 13 6.8 1 1.5 1.8 3.1 2.3 4.9.4 1.3.6 2.7.7 4.2z" style="fill:none;stroke:#eb5428;stroke-width:2;stroke-miterlimit:10"></path>
+                    <path d="M36.1 22.6c0 .5-.1 1-.5 1.4-.5.7-1.4 1.2-2.6 1.3-2.8.2-5.8.1-8.6.1h-12c-1.3 0-2.6 0-3.8-.1-1.1 0-2.4 0-3.3-.6-.8-.6-1.2-1.4-1.2-2.2 0-.9.3-1.8 1.5-2.3.9-.4 2-.5 3.1-.5 1.4 0 2.8-.1 4.3-.1h14.5c1.2 0 2.3 0 3.5.1 1.7.1 3.3-.1 4.4 1 .3.6.7 1.3.7 1.9z" style="fill:none;stroke:#fff;stroke-width:2.0832;stroke-miterlimit:10"></path>
+                    <path d="M38.5 22.6c0 .9-.2 1.7-.5 2.5-.6 1.3-1.7 2.1-3 2.2-3.3.3-6.7.2-9.9.2H11.2c-1.5 0-3-.1-4.4-.1-1.3-.1-2.8 0-3.8-1-.9-1-1.3-2.5-1.3-3.8 0-1.6.3-3.1 1.7-4 1-.7 2.3-.8 3.5-.8 1.6-.1 3.3-.1 4.9-.1H28.5c1.3 0 2.7 0 4 .1 2 .1 3.8-.1 5.1 1.7.5.9.9 2 .9 3.1z" style="fill:none;stroke:#eb5428;stroke-width:2.9408;stroke-miterlimit:10"></path>
+                  </svg></h2>
+                  <nav class="main">
                     <ul>
-                        <li>Home (logo svg)</li>
-                        <li>Breakfast (breakfast.png)</li>
-                        <li>Brunch (brunch.png)</li>
-                        <li>Lunch (lunch.png)</li>
-                        <li>Dinner (dinner.png)</li>
-                        <li>Appetizers (appetizers.png)</li>
-                        <li>Desserts (desserts.png)</li>
-                        <li>Beverages (beverages.png)</li>
-                        <li>(avatar svg)</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" class="kitchentools" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4 3h8l-1 9h-6z"></path>
+                            <path d="M7 18h2v3h-2z"></path>
+                            <path d="M20 3v12h-5c-.023 -3.681 .184 -7.406 5 -12z"></path>
+                            <path d="M20 15v6h-1v-3"></path>
+                            <line x1="8" y1="12" x2="8" y2="18"></line>
+                          </svg></li>
+                        <li><div><img src="images/breakfast.png" alt="breakfast png">Breakfast</div></li>
+                        <li><div><img src="images/brunch.png" alt="brunch png">Brunch</div></li>
+                        <li><div><img src="images/lunch.png" alt="lunch png">Lunch</div></li>
+                        <li><div><img src="images/dinner.png" alt="dinner png">Dinner</div></li>
+                        <li><div><img src="images/appetizers.png" alt="appetizers png">Appetizers</div></li>
+                        <li><div><img src="images/desserts.png" alt="desserts png">Desserts</div></li>
+                        <li><div><img src="images/beverages.png" alt="beverages png">Beverages</div></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" class="sign-in" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <circle cx="12" cy="10" r="3"></circle>
+                            <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"></path>
+                          </svg></li>
                     </ul>
                 </nav>
             </section>
 
             <section id="search">  
-                <h3>Search (search svg)</h3>
-            </section>
-
-            <section id="connect">
-                <h2>Connect</h2>
-                    <h3>Social Media Links</h3>
-                        <ul>
-                            <li>Facebook (facebook svg)</li>
-                            <li>Instagram (instagram svg)</li>
-                            <li>YouTube (youtube svg)</li>
-                            <li>Tik Tok (tiktok svg)</li>
-                        </ul>
-            </section>   
+                <h3>Search</h3>
+                <label for="site-search"></label>
+                <input type="search" id="site-search" placeholder="Find a recipe" name="q">
+                <button><svg xmlns="http://www.w3.org/2000/svg" class="search" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#EB5428" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <circle cx="10" cy="10" r="7"></circle>
+                    <line x1="21" y1="21" x2="15" y2="15"></line>
+                </svg></button>
+            </section>     
         </main>
         <footer>
-            <section>
-                <h3>Good Eats</h3> 
-                <p>
-                Copyright 2022 
-                Taco Cheesington
-                (Taco-cheesington.png)
-                </p>
+            <section id="connect">
+                <h2>Connect</h2>
+                <div class="connect1">
+                <h3>Social Media Links</h3>
+                    <ul>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" class="facebook" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#EB5428" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                            </svg>Facebook</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" class="instagram" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#EB5428" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
+                            </svg>Instagram</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" class="youtube" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#EB5428" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <rect x="3" y="5" width="18" height="14" rx="4"></rect>
+                            <path d="M10 9l5 3l-5 3z"></path>
+                            </svg>YouTube</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" class="tiktok" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#EB5428" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 12a4 4 0 1 0 4 4v-12a5 5 0 0 0 5 5"></path>
+                            </svg>Tik Tok</li>
+                    </ul>
+                </div>
+                <div class="connect2">
+                    <h3>Good Eats</h3> 
+                    <p>
+                    Copyright 2022<br> 
+                    Taco Cheesington<br>
+                    <a href="#"><img src="images/taco-cheesington.png" alt="taco-cheesington png"></a>
+                    </p>
+                </div>
             </section>
         </footer>
     </body>
